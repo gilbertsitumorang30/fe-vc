@@ -1,4 +1,3 @@
-import type { User } from "../types/user.ts";
 import { setToken } from "../utils/token.ts";
 import api from "./api.ts";
 
@@ -14,7 +13,6 @@ export interface LoginResponse {
 }
 
 export interface Data {
-  user: User;
   token: string;
 }
 export const login = async (payload: LoginRequest) => {
