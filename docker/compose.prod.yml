@@ -1,0 +1,14 @@
+services:
+  frontend:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: ${VITE_API_URL}
+
+    container_name: resto_client
+
+    restart: unless-stopped
+
+    ports:
+      - "80:80"
